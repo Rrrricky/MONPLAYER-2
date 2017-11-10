@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A personnal work using HTML, CSS, and JS to create a cool player">
+  <meta name="keywords" content="player, classical, music, interactions">
+  <meta name="author" content="Dufrêche Eric">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no">
+  <link rel="icon" type="image/ico" href="src/images/favicon.ico"/>
+  <link rel="stylesheet" href="styles/reset.css"/> 
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Devoirs 2 - Développement Web</title>
+</head>
+<body>
+  <div class="player">
+    <div class="introductiveText">
+      <p class="title">I can hear you</p>
+      <p class="subtitle">Ask me<br/><span class="artistName" style="color:#f29500;"></span></p>
+    </div>
+    <div class="fHoles">
+        <img class="leftHole" src="src/images/violin.png" alt="f-hole" width="100" height="144"/>
+        <img class="rightHole" src="src/images/violin2.png" alt="f-hole" width="100" height="144"/>
+    </div>
+    <div class="warningText">
+      <p>
+        Try me by clicking on this <a href="https://google.fr" class="websiteLink">link</a> from a Chrome browser for an optimal experience.<br/>If you don't want to talk, just click anywhere on this page.
+      </p>
+    </div>
+    <div class="mainInterface hidden">
+      <div class="artistList">
+        <div class="coverMozart">
+          <img src="src/images/mozart.png" alt="mozart" style="width:70px; height:70px;"/>
+          <p>Mozart</p>
+        </div>
+        <div class="coverBeethoven"> 
+          <img src="src/images/beethoven.png" alt="beethoven" style="width:70px; height:70px;"/>
+          <p>Beethoven</p>
+        </div>
+        <div class="coverBach">
+          <img src="src/images/bach.png" alt="beethoven" style="width:70px; height:70px;"/>
+          <p>Bach</p>
+        </div>
+      </div>
+      <div class="help">
+        <span>?</span>
+        <div class="indications">
+          <div class="vocabulary">
+            <ul>
+              <li class="listTitle">Vocal commands</li>
+              <li>"Play" or "Lecture"</li>
+              <li>"Pause"</li>
+              <li>"Next" or "Suivant"</li>
+              <li>"Previous" or "Précédent"</li>
+              <li>"Fortissimo"</li>
+              <li>"Pianissimo"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="volume">
+          <div class="volumeButton">
+            <div class="innerBorderButton">
+              <div class="holeButton"></div>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <div class="artist">Mozart</div>
+          <div class="musicTitle">Requiem Mass in D Minor, K. 626: VII. Lacrimosa</div>
+        </div>
+        <div class="barContainer">
+          <div class="seekBar">
+            <div class="fillBar"></div>
+            <div class="currentDuration">0:00</div>
+            <div class="totalDuration">-:--</div>
+          </div>
+        </div>
+        <div class="mainButtons">
+          <div class="previousButton"><div class="arrowPrev"></div></div>
+          <div class="nextButton"><div class="arrowNext"></div></div>
+          <div class="playButton"></div>
+          <div class="pausedButton hide">
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sounds">
+        <audio class="track mozart" src="src/audio/mozart.mp3"></audio>
+        <audio class="track beethoven" src="src/audio/beethoven.mp3"></audio>
+        <audio class="track bach" src="src/audio/bach.mp3"></audio>
+      </div>
+    </div>
+  </div>
+  <script src="src/scripts/vendor/annyang.js"></script>
+  <script src="src/scripts/vendor/TweenMax.min.js"></script>
+  <script src="src/scripts/main.js"></script>
+</body>
+</html>
