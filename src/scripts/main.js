@@ -640,15 +640,11 @@ let volumeDown = () => {
 let refreshDurate=()=>{
 for(let i=0;i<$sounds.length;i++){
 $sounds[i].addEventListener(
-  "play", //event
+  "playing", //event
   ()=>{
-    $sounds[i].addEventListener(
-      "timeupdate",
-      ()=>{
       const minutes=Math.floor(($sounds[i].duration)/60)
       const seconds=Math.floor(($sounds[i].duration)%60)
       $totalDuration.textContent=`${String(minutes)}:${String(seconds)}`
-      })
     }
   )
 }
