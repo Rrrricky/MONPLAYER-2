@@ -31,19 +31,36 @@ let currentSound = 0
 
 
 
-document.addEventListener(
-  "DOMContentLoaded",
-  ()=>{
-    $player.style.display="block"
-    document.querySelector(".loader").style.opacity="0"
-    setTimeout(disa, 600)
-  }
-)
+//document.addEventListener( 
+//  "DOMContentLoaded",//Ne prend pas encore le chargement d'images, donc à modifier.
+//  ()=>{
+//    $player.style.display="block"
+//    document.querySelector(".loader").style.opacity="0"
+//    setTimeout(disa, 600)
+//  }
+//)
 
-let disa=()=>{
+const img = document.querySelector(".back")
+const newImg = document.createElement("img")
+
+const endLoading=()=>{
   document.querySelector(".loader").style.display="none"
 }
   
+const backgroundLoader=()=>{
+  newImg.addEventListener(
+    "load",
+    ()=>{
+      $body.style.backgroundImage="url('"+newImg.src+"')"
+      $player.style.display="block"
+      document.querySelector(".loader").style.opacity="0"
+      setTimeout(endLoading, 600)
+    }
+  )
+  newImg.src=img.src
+}
+
+backgroundLoader()
 
 let appearanceMenu = () => {
   $mainInterface.classList.remove("hidden")
@@ -844,7 +861,7 @@ $help.addEventListener(
 )
 
 //Commentaires
-//Sur smartphone : enlever l'alerte au début et les commandes
+//Sur smartphone : enlever l'alerte au début
 //JS Propre
 //Fonctionne sur smartphone
 
