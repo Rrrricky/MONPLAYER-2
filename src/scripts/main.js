@@ -68,7 +68,8 @@ $sounds[0].addEventListener(
   "waiting",
   ()=>{
     window.alert("Wait! I need to buffer the next frame");
-};
+  }
+)
 
 
 let appearanceMenu = () => {
