@@ -9,6 +9,18 @@ body{
   overflow: hidden;
 }
 
+body .clickToUse{ /*Element created in JS*/
+  width: 400px;
+  height: 10px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  color:white;
+  font-size: 20px;
+}
+
 .musicLoader{
   width: 25px;
   height: 25px;
@@ -240,6 +252,7 @@ body{
 }
 
 .player .warningText p{
+  width: 90%;
   color: #eee;
   font-size: 20px;
   text-align: center;
@@ -357,12 +370,13 @@ body{
   line-height: 100px;
   text-transform: uppercase;
   text-shadow: 0px 0px 6px rgba(15, 15, 15, 0.86);
+  color:#ccc;
 }
 
 .player .mainInterface .controls .description .musicTitle{
   font-size: 20px;
   margin-left: 5px;
-  text-shadow: 0px 0px 6px rgba(15, 15, 15, 0.86);
+  text-shadow: 0px 0px 6px rgba(15, 15, 15, 0.5);
 }
 
 .player .mainInterface .help{
@@ -494,11 +508,6 @@ body{
   .player .mainInterface .controls .mainButtons .pausedButton .rectangle{
     background: #ddd;
   }
-  .player .warningText p{
-    width: 90%;
-    font-size: 22px;
-    display: none;
-  }
 }
 
 @media (max-width:600px){
@@ -523,8 +532,7 @@ body{
   .player .mainInterface .controls .barContainer .seekBar{
     width: 200px;
   }
-  .player .warningText p{
-    width: 80%;
-    font-size: 22px;
+   .player .introductiveText .subtitle{
+    font-size: 25px;
   }
 }

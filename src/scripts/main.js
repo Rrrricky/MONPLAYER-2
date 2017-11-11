@@ -402,6 +402,12 @@ annyang.start()
 if(!annyang){
   $title.textContent="I could here you"
   $subtitle.textContent="(if you use Chrome)" 
+  $subtitle.style.fontSize="25px"
+//  const clickToUse = document.createElement("p")
+//  clickToUse.classList.add("clickToUse")
+//  clickToUse.textContent="Click anywhere to continue"
+//  $body.appendChild(clickToUse)
+  document.querySelector(".warningText p").textContent="Click anywhere to continue"
   $help.style.display="none"
 }
 
