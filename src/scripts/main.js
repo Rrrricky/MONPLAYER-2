@@ -643,7 +643,7 @@ $sounds[i].addEventListener(
   "play", //event
   ()=>{
     $sounds[i].addEventListener(
-      "loadedmetadata",
+      "timeupdate",
       ()=>{
       const minutes=Math.floor(($sounds[i].duration)/60)
       const seconds=Math.floor(($sounds[i].duration)%60)
