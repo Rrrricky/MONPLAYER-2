@@ -21,7 +21,7 @@ ___
 > Voice commands are only available if you use:
 
 > - A computer + Chrome + Wifi/3G/4G + the render of your IDE
-- [The official website](#) from your computer
+- [The github](https://rrrricky.github.io/MONPLAYER-2/) from your computer
 
 ## Features
 - Voice commands (English and French)
