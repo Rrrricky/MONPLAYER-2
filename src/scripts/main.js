@@ -397,8 +397,8 @@ annyang.start()
 
 
 //Speech recognition is not supported
-if (!annyang) {
-  window.alert("For an optimal experience, open this window from a web server on Chrome.")
+if(!annyang){
+  window.alert("For an optimal experience, open this window from your PC and Chrome.")
   $introductiveText.style.display="none"
   appearanceMenu()
   $body.style.cursor="default"  
@@ -885,9 +885,6 @@ $help.addEventListener(
   }
 )
 
+//Bug NaN sur la Duration 
 //Commentaires
-//Sur smartphone : enlever l'alerte au début
 //JS Propre
-//Fonctionne sur smartphone
-
-//Mettre sur serveur

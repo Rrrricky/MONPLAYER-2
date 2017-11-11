@@ -20,8 +20,8 @@ ___
 
 > Voice commands are only available if you use:
 
-> - Chrome + Wifi/3G/4G + the render of your IDE
-- [The official website](#)
+> - A computer + Chrome + Wifi/3G/4G + the render of your IDE
+- [The official website](#) from your computer
 
 ## Features
 - Voice commands (English and French)
