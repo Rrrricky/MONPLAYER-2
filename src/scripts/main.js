@@ -401,7 +401,7 @@ annyang.start()
 //Speech recognition is not supported
 if(!annyang){
   $title.textContent="I could here you"
-  $subtitle.textContent="(if you use Chrome from a computer)" 
+  $subtitle.textContent="(if you use Chrome)" 
   $help.style.display="none"
 }
 
