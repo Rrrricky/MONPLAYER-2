@@ -644,7 +644,7 @@ $sounds[i].addEventListener(
   ()=>{
       const minutes=Math.floor(($sounds[i].duration)/60)
       const seconds=Math.floor(($sounds[i].duration)%60)
-      $totalDuration.innerHTML=`${String(minutes)}:${String(seconds)}`
+      $totalDuration.textContent=`${String(minutes)}:${String(seconds)}`
     }
   )
 }
@@ -664,16 +664,16 @@ let durate = () => {
           const minutes = Math.floor(($sounds[i].currentTime) / 60)
           const seconds = Math.floor(($sounds[i].currentTime) % 60)
           if (seconds < 10) {
-            $currentDuration.innerHTML = `${String(minutes)}:0${String(seconds)}`
+            $currentDuration.textContent = `${String(minutes)}:0${String(seconds)}`
           } else {
-            $currentDuration.innerHTML = `${String(minutes)}:${String(seconds)}`
+            $currentDuration.textContent = `${String(minutes)}:${String(seconds)}`
           }
         }
       )
       if (seconds < 10) {
-        $currentDuration.innerHTML = `${String(minutes++)}:0${String(seconds++)}`
+        $currentDuration.textContent = `${String(minutes++)}:0${String(seconds++)}`
       } else {
-        $currentDuration.innerHTML = `${String(minutes++)}:${String(seconds++)}`
+        $currentDuration.textContent = `${String(minutes++)}:${String(seconds++)}`
       }
     }
   }
@@ -807,10 +807,10 @@ const previousTrack=()=>{
         $sounds[0].classList.remove("selected")
         $sounds[2].classList.add("selected")
         $sounds[2].currentTime=0
-        $currentDuration.innerHTML = "0:00"
+        $currentDuration.textContent = "0:00"
         const minutes=Math.floor(($sounds[2].duration)/60)
         const seconds=Math.floor(($sounds[2].duration)%60)
-        $totalDuration.innerHTML=`${String(minutes)}:${String(seconds)}`
+        $totalDuration.textContent=`${String(minutes)}:${String(seconds)}`
         $artisticName.textContent="Bach"
         $musicTitle.textContent="Concerto for Two Violins in D Minor, BWV 1043: I. Vivace"
         currentSound=$sounds[2]
@@ -820,7 +820,7 @@ const previousTrack=()=>{
         $sounds[1].classList.remove("selected")
         $sounds[0].classList.add("selected")
         $sounds[0].currentTime=0
-        $currentDuration.innerHTML = "0:00"
+        $currentDuration.textContent = "0:00"
         $artisticName.textContent="Mozart"
         $musicTitle.textContent="Requiem Mass in D Minor, K. 626: VII. Lacrimosa"
         refreshDurate()
@@ -829,10 +829,10 @@ const previousTrack=()=>{
         $sounds[1].classList.remove("selected")
         $sounds[0].classList.add("selected")
         $sounds[0].currentTime=0
-        $currentDuration.innerHTML = "0:00"
+        $currentDuration.textContent = "0:00"
         const minutes=Math.floor(($sounds[0].duration)/60)
         const seconds=Math.floor(($sounds[0].duration)%60)
-        $totalDuration.innerHTML=`${String(minutes)}:${String(seconds)}`
+        $totalDuration.textContent=`${String(minutes)}:${String(seconds)}`
         $artisticName.textContent="Mozart"
         $musicTitle.textContent="Requiem Mass in D Minor, K. 626: VII. Lacrimosa"
         currentSound=$sounds[0]
@@ -842,7 +842,7 @@ const previousTrack=()=>{
         $sounds[2].classList.remove("selected")
         $sounds[1].classList.add("selected")
         $sounds[1].currentTime=0
-        $currentDuration.innerHTML = "0:00"
+        $currentDuration.textContent = "0:00"
         refreshDurate()
         $artisticName.textContent="Beethov."
         $musicTitle.textContent="Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio"
@@ -851,10 +851,10 @@ const previousTrack=()=>{
         $sounds[2].classList.remove("selected")
         $sounds[1].classList.add("selected")
         $sounds[1].currentTime=0
-        $currentDuration.innerHTML = "0:00"
+        $currenttextContent = "0:00"
         const minutes=Math.floor(($sounds[1].duration)/60)
         const seconds=Math.floor(($sounds[1].duration)%60)
-        $totalDuration.innerHTML=`${String(minutes)}:${String(seconds)}`
+        $totalDuration.textContent=`${String(minutes)}:${String(seconds)}`
         $artisticName.textContent="Beethov."
         $musicTitle.textContent="Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio"
         currentSound=$sounds[1]
