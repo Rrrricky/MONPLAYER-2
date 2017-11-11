@@ -40,7 +40,7 @@ let currentSound = 0
 //  }
 //)
 
-const img = document.querySelector(".back")
+const img = document.querySelector(".backgroundImage")
 const newImg = document.createElement("img")
 
 const endLoading=()=>{
@@ -61,6 +61,15 @@ const backgroundLoader=()=>{
 }
 
 backgroundLoader()
+
+
+
+$sounds[0].addEventListener(
+  "waiting",
+  ()=>{
+    window.alert("Wait! I need to buffer the next frame");
+};
+
 
 let appearanceMenu = () => {
   $mainInterface.classList.remove("hidden")
