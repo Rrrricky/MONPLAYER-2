@@ -9,6 +9,15 @@ body{
   overflow: hidden;
 }
 
+.musicLoader{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
+}
+
 .loader{
   position: absolute;
   top: -10px;

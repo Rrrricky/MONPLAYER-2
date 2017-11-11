@@ -1,4 +1,4 @@
-const $player = document.querySelector(".player")
+let $player = document.querySelector(".player")
 const $introductiveText = $player.querySelector(".introductiveText")
 const $artist = $player.querySelector(".introductiveText .subtitle .artistName")
 const names = ['"Mozart"', '"Bach"', '"Beethoven"']
@@ -63,13 +63,28 @@ const backgroundLoader=()=>{
 backgroundLoader()
 
 
+let musicLoader = document.querySelector(".musicLoader")
 
-$sounds[0].addEventListener(
-  "waiting",
-  ()=>{
-    window.alert("Wait! I need to buffer the next frame");
-  }
-)
+for(let i=0;i<$sounds.length;i++){
+  $sounds[i].addEventListener(
+    "waiting",
+    ()=>{
+      musicLoader.style.display="block"
+      console.log("waiting")
+    }
+  ) 
+}
+
+for(let i=0;i<$sounds.length;i++){
+  $sounds[i].addEventListener(
+    "playing",
+    ()=>{
+      musicLoader.style.display="none"
+      console.log("done")
+    }
+  )
+}
+
 
 
 let appearanceMenu = () => {
