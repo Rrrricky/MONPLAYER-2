@@ -2,7 +2,6 @@ body{
   background-image: url(../src/images/background.jpg);
   background-size: 100% 100%;
   margin: 10px;
-  width: 100%;
   position:fixed;
   height: 97vh;
   border: 10px black solid;
