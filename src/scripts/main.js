@@ -27,6 +27,8 @@ const $artisticName = $description.querySelector(".artist")
 const $musicTitle = $description.querySelector(".musicTitle")
 const $help = $player.querySelector(".help")
 const $indications = document.querySelector(".indications")
+let $title = $introductiveText.querySelector(".title")
+let $subtitle = $introductiveText.querySelector(".subtitle")
 let currentSound = 0
 
 
@@ -398,11 +400,9 @@ annyang.start()
 
 //Speech recognition is not supported
 if(!annyang){
-  window.alert("For an optimal experience, open this window from your PC and Chrome.")
-  $introductiveText.style.display="none"
-  appearanceMenu()
-  $body.style.cursor="default"  
-  $warningText.style.display="none"
+  $title.textContent="I could here you"
+  $subtitle.textContent="(if you use Chrome from a computer)" 
+  $help.style.display="none"
 }
 
 
