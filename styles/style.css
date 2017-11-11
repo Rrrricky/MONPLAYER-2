@@ -1,8 +1,6 @@
 body{
-  max-width: 100%;
   background-image: url(../src/images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 110%;
+  background-size: 100% 100%;
   margin: 10px;
   height: 97vh;
   border: 10px black solid;
@@ -10,6 +8,44 @@ body{
   font-weight: 100;
   cursor: pointer;
   overflow: hidden;
+}
+
+.loader{
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 103%;
+  height: 103%;
+  background: #ddd;
+  transition: opacity .5s;
+  display: flex;
+  align-items: center;
+
+}
+
+.loader .loadingElements{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.loader .loadingText{
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.loader .loadingPicture{
+  animation: loading .5s infinite linear;
+  top: 60vh;
+}
+
+@keyframes loading{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+.player{
+  display: none;
 }
 
 .player .introductiveText{

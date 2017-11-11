@@ -30,6 +30,21 @@ const $indications = document.querySelector(".indications")
 let currentSound = 0
 
 
+
+document.addEventListener(
+  "DOMContentLoaded",
+  ()=>{
+    $player.style.display="block"
+    document.querySelector(".loader").style.opacity="0"
+    setTimeout(disa, 600)
+  }
+)
+
+let disa=()=>{
+  document.querySelector(".loader").style.display="none"
+}
+  
+
 let appearanceMenu = () => {
   $mainInterface.classList.remove("hidden")
   $introductiveText.style.display = "none" //Make the text disappear after the smooth transition
@@ -827,7 +842,6 @@ $help.addEventListener(
     })
   }
 )
-
 
 //Commentaires
 //JS Propre
