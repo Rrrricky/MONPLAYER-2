@@ -640,7 +640,7 @@ let volumeDown = () => {
 let refreshDurate=()=>{ 
 for(let i=0;i<$sounds.length;i++){
 $sounds[i].addEventListener(
-  "durationchange", //event
+  "play", //event
   ()=>{
       const minutes=Math.floor(($sounds[i].duration)/60)
       const seconds=Math.floor(($sounds[i].duration)%60)
@@ -728,6 +728,7 @@ const nextTrack=()=>{
         $sounds[0].classList.remove("selected")
         $sounds[1].classList.add("selected")
         $sounds[1].currentTime=0
+        refreshDurate()
         $artisticName.textContent="Beethov."
         $musicTitle.textContent="Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio"
         $currentDuration.innerHTML = "0:00"
