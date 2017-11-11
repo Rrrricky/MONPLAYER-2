@@ -844,6 +844,7 @@ $help.addEventListener(
 )
 
 //Commentaires
+//Sur smartphone : enlever l'alerte au début et les commandes
 //JS Propre
 //Fonctionne sur smartphone
 

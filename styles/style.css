@@ -497,9 +497,8 @@ body{
   .player .mainInterface .artistList{
     width: 300px;
   }
-  .player .mainInterface .help .indications{
-    width: 300px;
-    height: 450px;
+  .player .mainInterface .help{
+    display: none;
   }
   .player .mainInterface .controls .barContainer .seekBar .currentDuration{
     left: -45px;
