@@ -637,7 +637,7 @@ let volumeDown = () => {
 
 
 //The total duration of the track
-let refreshDurate=()=>{
+let refreshDurate=()=>{ 
 for(let i=0;i<$sounds.length;i++){
 $sounds[i].addEventListener(
   "durationchange", //event
