@@ -79,7 +79,7 @@ for(let i=0;i<$sounds.length;i++){
 
 for(let i=0;i<$sounds.length;i++){
   $sounds[i].addEventListener(
-    "canplay",
+    "playing",
     ()=>{
       musicLoader.style.display="none"
       console.log("done")
@@ -640,7 +640,7 @@ let volumeDown = () => {
 let refreshDurate=()=>{
 for(let i=0;i<$sounds.length;i++){
 $sounds[i].addEventListener(
-  "canplay", //event
+  "durationchange", //event
   ()=>{
       const minutes=Math.floor(($sounds[i].duration)/60)
       const seconds=Math.floor(($sounds[i].duration)%60)
