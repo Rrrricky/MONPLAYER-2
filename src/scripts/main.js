@@ -642,9 +642,13 @@ for(let i=0;i<$sounds.length;i++){
 $sounds[i].addEventListener(
   "play", //event
   ()=>{
+    $sounds[i].addEventListener(
+      "loadedmetadata",
+      ()=>{
       const minutes=Math.floor(($sounds[i].duration)/60)
       const seconds=Math.floor(($sounds[i].duration)%60)
       $totalDuration.textContent=`${String(minutes)}:${String(seconds)}`
+      })
     }
   )
 }
