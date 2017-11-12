@@ -1,5 +1,5 @@
 # Customized audio player 
-A personalized audio player with voice commands created with: 
+A personalized and responsive audio player with voice commands, created with: 
 
 - HTML
 - CSS
@@ -30,14 +30,15 @@ ___
 - Responsive design 
 
 ## Future features
-- Use the API of Spotify to enjoy a large selection of musics
-- Make a working version for smartphones
+- The API of Spotify to enjoy a large selection of musics
+- Better compatibility on smartphones
+- Faster loading of the songs
 
 ## Thanks
 - Bruno Simon
 - [Hold down a key to go further](https://openclassrooms.com/forum/sujet/lecture-avancant-sur-pression-dune-touche)
 - [Combine the mousedown and mousemove](https://stackoverflow.com/questions/34473982/if-mousedown-then-trigger-mousemove-else-do-nothing)
-- [trigger an event with keypress](https://stackoverflow.com/questions/6199038/javascript-event-triggered-by-pressing-space)
+- [Trigger an event with keypress](https://stackoverflow.com/questions/6199038/javascript-event-triggered-by-pressing-space)
 - [CSS Triangle generator](http://triangle.designyourcode.io/)
 - [Get a proper rotation value after a getProperty](https://css-tricks.com/get-value-of-css-rotation-through-javascript/)
 - [Text-shadow generator](https://css3gen.com/text-shadow/)

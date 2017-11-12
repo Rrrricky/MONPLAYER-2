@@ -235,8 +235,8 @@ class Player {
       "mousemove",
       (event) => {
         event.preventDefault()
-        ratioX = event.clientX - $volume.offsetLeft
-        ratioY = event.clientY - $volume.offsetTop
+        const ratioX = event.clientX - $volume.offsetLeft
+        const ratioY = event.clientY - $volume.offsetTop
 
         if (isMousedown && ratioX < 70 && ((ratioX - ratioY) > -50)) {
           $volume.style.transform = `rotate(${(ratioX-ratioY)}deg)`
