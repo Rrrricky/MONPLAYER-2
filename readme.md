@@ -5,7 +5,7 @@ A personalized and responsive audio player with voice commands, created with:
 - CSS
 - JS
 - Annyang (a JavaScript SpeechRecognition library)
-- GreenSocks
+- GreenSock
 
 ## Instructions
 
@@ -21,7 +21,7 @@ ___
 > Voice commands are only available if you use:
 
 > - A computer + Chrome + Wifi/3G/4G + the render of your IDE
-- [The github](https://rrrricky.github.io/MONPLAYER-2/) from your computer
+- [The github](https://rrrricky.github.io/fortissimo/) from your computer
 
 ## Features
 - Voice commands (English and French)
