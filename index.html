@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A personnal work using HTML, CSS, and JS to create a cool player">
-  <meta name="keywords" content="player, classical, music, interactions">
+  <meta name="description" content="A personnal work using HTML, CSS, and JS to create a personalized audio player with voice commands">
+  <meta name="keywords" content="player, classical, music, voice, interactions">
   <meta name="author" content="Dufrêche Eric">
   <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no">
   <link rel="icon" type="image/ico" href="src/images/favicon.ico"/>
@@ -31,7 +31,7 @@
     </div>
     <div class="warningText">
       <p>
-        To use speech recognition, click on this <a href="https://rrrricky.github.io/MONPLAYER-2/" class="websiteLink">link</a> from a Chrome browser on PC.<br/>If you don't want to talk, just click anywhere on this page.
+        To use speech recognition, click on this <a href="https://rrrricky.github.io/MONPLAYER-2/" class="websiteLink">link</a> from a Chrome browser on a PC.<br/>If you don't want to talk, just click anywhere on this page.
       </p>
     </div>
     <div class="mainInterface hidden">
@@ -54,7 +54,7 @@
         <div class="indications">
           <div class="vocabulary">
             <ul>
-              <li class="listTitle">Vocal commands</li>
+              <li class="listTitle">Voice commands</li>
               <li>"Play" or "Lecture"</li>
               <li>"Pause"</li>
               <li>"Next" or "Suivant"</li>
@@ -101,8 +101,11 @@
       </div>
     </div>
   </div>
-  <script src="src/scripts/vendor/annyang.js"></script>
+  <script src="src/scripts/vendor/annyang.js"></script> <!--JavaScript SpeechRecognition library-->
   <script src="src/scripts/vendor/TweenMax.min.js"></script>
+  <script src="src/scripts/IntroductiveInterface.js"></script>
+  <script src="src/scripts/Player.js"></script>
+  <script src="src/scripts/SpeechRecognition.js"></script>
   <script src="src/scripts/main.js"></script>
 </body>
 </html>
