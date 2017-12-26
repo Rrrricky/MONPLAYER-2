@@ -34,60 +34,119 @@ class Player {
 
 
     //Click on the compositer's picture to play a song
-    $covers[0].addEventListener(
-      "click",
-      () => {
-        $artisticName.textContent = "Mozart"
-        $musicTitle.textContent = "Requiem Mass in D Minor, K. 626: VII. Lacrimosa"
-        $sounds[0].play()
-        $sounds[0].classList.add("selected")
-        $sounds[1].classList.remove("selected")
-        $sounds[2].classList.remove("selected")
-        $sounds[1].pause()
-        $sounds[2].pause()
-        $sounds[0].currentTime = 0 //Start the track from the beginning
-        $pausedButton.classList.remove("hide")
-        $playButton.style.display = "none"
-        currentSound = $sounds[0]
-      }
-    )
+    if (Modernizr.touchevents) {
+      $covers[0].addEventListener(
+        "touchstart",
+        () => {
+          $artisticName.textContent = "Mozart"
+          $musicTitle.textContent = "Requiem Mass in D Minor, K. 626: VII. Lacrimosa"
+          $sounds[0].play()
+          $sounds[0].classList.add("selected")
+          $sounds[1].classList.remove("selected")
+          $sounds[2].classList.remove("selected")
+          $sounds[1].pause()
+          $sounds[2].pause()
+          $sounds[0].currentTime = 0 //Start the track from the beginning
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+          currentSound = $sounds[0]
+        }
+      )
+    } else {
+      $covers[0].addEventListener(
+        "click",
+        () => {
+          $artisticName.textContent = "Mozart"
+          $musicTitle.textContent = "Requiem Mass in D Minor, K. 626: VII. Lacrimosa"
+          $sounds[0].play()
+          $sounds[0].classList.add("selected")
+          $sounds[1].classList.remove("selected")
+          $sounds[2].classList.remove("selected")
+          $sounds[1].pause()
+          $sounds[2].pause()
+          $sounds[0].currentTime = 0 //Start the track from the beginning
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+          currentSound = $sounds[0]
+        }
+      )
+    }
 
-    $covers[1].addEventListener(
-      "click",
-      () => {
-        $artisticName.textContent = "Beethov."
-        $musicTitle.textContent = "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio"
-        $sounds[1].play()
-        $sounds[1].classList.add("selected")
-        $sounds[0].classList.remove("selected")
-        $sounds[2].classList.remove("selected")
-        $sounds[0].pause()
-        $sounds[2].pause()
-        $sounds[1].currentTime = 0 //Start the track from the beginning
-        $pausedButton.classList.remove("hide")
-        $playButton.style.display = "none"
-        currentSound = $sounds[1]
-      }
-    )
+    if (Modernizr.touchevents) {
+      $covers[1].addEventListener(
+        "touchstart",
+        () => {
+          $artisticName.textContent = "Beethov."
+          $musicTitle.textContent = "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio"
+          $sounds[1].play()
+          $sounds[1].classList.add("selected")
+          $sounds[0].classList.remove("selected")
+          $sounds[2].classList.remove("selected")
+          $sounds[0].pause()
+          $sounds[2].pause()
+          $sounds[1].currentTime = 0 //Start the track from the beginning
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+          currentSound = $sounds[1]
+        }
+      )
+    } else {
+      $covers[1].addEventListener(
+        "click",
+        () => {
+          $artisticName.textContent = "Beethov."
+          $musicTitle.textContent = "Symphony No. 5 in C Minor, Op. 67: I. Allegro con brio"
+          $sounds[1].play()
+          $sounds[1].classList.add("selected")
+          $sounds[0].classList.remove("selected")
+          $sounds[2].classList.remove("selected")
+          $sounds[0].pause()
+          $sounds[2].pause()
+          $sounds[1].currentTime = 0 //Start the track from the beginning
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+          currentSound = $sounds[1]
+        }
+      )
+    }
 
-    $covers[2].addEventListener(
-      "click",
-      () => {
-        $artisticName.textContent = "Bach"
-        $musicTitle.textContent = "Concerto for Two Violins in D Minor, BWV 1043: I. Vivace"
-        $sounds[2].play()
-        $sounds[2].classList.add("selected")
-        $sounds[1].classList.remove("selected")
-        $sounds[0].classList.remove("selected")
-        $sounds[0].pause()
-        $sounds[1].pause()
-        $sounds[2].currentTime = 0 //Start the track from the beginning 
-        $pausedButton.classList.remove("hide")
-        $playButton.style.display = "none"
-        currentSound = $sounds[2]
-      }
-    )
-
+    if (Modernizr.touchevents) {
+      $covers[2].addEventListener(
+        "touchstart",
+        () => {
+          $artisticName.textContent = "Bach"
+          $musicTitle.textContent = "Concerto for Two Violins in D Minor, BWV 1043: I. Vivace"
+          $sounds[2].play()
+          $sounds[2].classList.add("selected")
+          $sounds[1].classList.remove("selected")
+          $sounds[0].classList.remove("selected")
+          $sounds[0].pause()
+          $sounds[1].pause()
+          $sounds[2].currentTime = 0 //Start the track from the beginning 
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+          currentSound = $sounds[2]
+        }
+      )
+    } else {
+      $covers[2].addEventListener(
+        "click",
+        () => {
+          $artisticName.textContent = "Bach"
+          $musicTitle.textContent = "Concerto for Two Violins in D Minor, BWV 1043: I. Vivace"
+          $sounds[2].play()
+          $sounds[2].classList.add("selected")
+          $sounds[1].classList.remove("selected")
+          $sounds[0].classList.remove("selected")
+          $sounds[0].pause()
+          $sounds[1].pause()
+          $sounds[2].currentTime = 0 //Start the track from the beginning 
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+          currentSound = $sounds[2]
+        }
+      )
+    }
 
     //Press the spacebar to play/pause
     document.addEventListener(
@@ -197,20 +256,35 @@ class Player {
 
 
     //Click on the seekbar 
-    $seekBar.addEventListener(
-      "mousedown",
-      (event) => {
-        event.preventDefault()
-        const ratio = (event.clientX - $seekBar.offsetLeft + ($seekBar.offsetWidth / 2)) / $seekBar.offsetWidth
-        /*clientX gives a value relative to where you click. But this valeur is offset compared to original margin. OffsetLeft allows to get the value of the offset relative to the page*/
-        for (let i = 0; i < $sounds.length; i++) {
-          const audioTime = ratio * $sounds[i].duration
-          $sounds[i].currentTime = audioTime
-          console.log(audioTime)
+    if (Modernizr.touchevents) {
+      $seekBar.addEventListener(
+        "touchstart",
+        (event) => {
+          event.preventDefault()
+          const ratio = (event.clientX - $seekBar.offsetLeft + ($seekBar.offsetWidth / 2)) / $seekBar.offsetWidth
+          /*clientX gives a value relative to where you click. But this valeur is offset compared to original margin. OffsetLeft allows to get the value of the offset relative to the page*/
+          for (let i = 0; i < $sounds.length; i++) {
+            const audioTime = ratio * $sounds[i].duration
+            $sounds[i].currentTime = audioTime
+            console.log(audioTime)
+          }
         }
-      }
-    )
-
+      )
+    } else {
+      $seekBar.addEventListener(
+        "mousedown",
+        (event) => {
+          event.preventDefault()
+          const ratio = (event.clientX - $seekBar.offsetLeft + ($seekBar.offsetWidth / 2)) / $seekBar.offsetWidth
+          /*clientX gives a value relative to where you click. But this valeur is offset compared to original margin. OffsetLeft allows to get the value of the offset relative to the page*/
+          for (let i = 0; i < $sounds.length; i++) {
+            const audioTime = ratio * $sounds[i].duration
+            $sounds[i].currentTime = audioTime
+            console.log(audioTime)
+          }
+        }
+      )
+    }
 
     //Detect the mousedown on the volume button
     let isMousedown = false
@@ -303,34 +377,73 @@ class Player {
 
 
     //Click on the big play button
-    $playButton.addEventListener(
-      "click",
-      () => {
-        playAndPause()
-        $pausedButton.classList.remove("hide")
-        $playButton.style.display = "none"
-      }
-    )
+    if (Modernizr.touchevents) {
+      $playButton.addEventListener(
+        "touchstart",
+        () => {
+          playAndPause()
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+        }
+      )
+    } else {
+      $playButton.addEventListener(
+        "click",
+        () => {
+          playAndPause()
+          $pausedButton.classList.remove("hide")
+          $playButton.style.display = "none"
+        }
+      )
+    }
 
     //Click on the pause button
-    $pausedButton.addEventListener(
-      "click",
-      () => {
-        playAndPause()
-        $pausedButton.classList.add("hide")
-        $playButton.style.display = "block"
-      }
-    )
+    if (Modernizr.touchevents) {
+      $pausedButton.addEventListener(
+        "touchstart",
+        () => {
+          playAndPause()
+          $pausedButton.classList.add("hide")
+          $playButton.style.display = "block"
+        }
+      )
+    } else {
+      $pausedButton.addEventListener(
+        "click",
+        () => {
+          playAndPause()
+          $pausedButton.classList.add("hide")
+          $playButton.style.display = "block"
+        }
+      )
+    }
 
     //Click on the next button
-    $nextButton.addEventListener(
-      "click",
-      () => {
-        nextTrack()
-      }
-    )
+    if (Modernizr.touchevents) {
+      $nextButton.addEventListener(
+        "touchstart",
+        () => {
+          nextTrack()
+        }
+      )
+    } else {
+      $nextButton.addEventListener(
+        "click",
+        () => {
+          nextTrack()
+        }
+      )
+    }
 
     //Click on the previous button
+    if (Modernizr.touchevents) {
+      $previousButton.addEventListener(
+        "touchstart",
+        () => {
+          previousTrack()
+        }
+      )
+    }
     $previousButton.addEventListener(
       "click",
       () => {
