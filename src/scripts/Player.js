@@ -261,7 +261,7 @@ class Player {
         "touchstart",
         (event) => {
           event.preventDefault()
-          const ratio = (event.clientX - $seekBar.offsetLeft + ($seekBar.offsetWidth / 2)) / $seekBar.offsetWidth
+          const ratio = (event.touches[0].clientX - $seekBar.offsetLeft + ($seekBar.offsetWidth / 2)) / $seekBar.offsetWidth
           /*clientX gives a value relative to where you click. But this valeur is offset compared to original margin. OffsetLeft allows to get the value of the offset relative to the page*/
           for (let i = 0; i < $sounds.length; i++) {
             const audioTime = ratio * $sounds[i].duration
