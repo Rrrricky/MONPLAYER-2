@@ -68,15 +68,26 @@ class IntroductiveInterface {
 
 
     //Skip the vocal experience by clicking anywhere on the page
-    $body.addEventListener(
-      "click",
-      () => {
-        $body.style.cursor = "default"
-        $introductiveText.classList.add("smoothTransition")
-        $warningText.style.display = "none"
-        setTimeout(appearancePlayer, 500)
-      }
-    )
-
+    if (Modernizr.touchevents) {
+      $body.addEventListener(
+        "touchstart",
+        () => {
+          $body.style.cursor = "default"
+          $introductiveText.classList.add("smoothTransition")
+          $warningText.style.display = "none"
+          setTimeout(appearancePlayer, 500)
+        }
+      )
+    } else {
+      $body.addEventListener(
+        "click",
+        () => {
+          $body.style.cursor = "default"
+          $introductiveText.classList.add("smoothTransition")
+          $warningText.style.display = "none"
+          setTimeout(appearancePlayer, 500)
+        }
+      )
+    }
   }
 }
