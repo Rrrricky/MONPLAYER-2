@@ -107,7 +107,7 @@ class SpeechRecognition {
         },
         'Previous': () => {
           console.log("Previous")
-          nextTrack()
+          previousTrack()
         },
         'Suivant': () => {
           console.log("Suivant")
