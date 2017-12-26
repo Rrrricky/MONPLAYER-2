@@ -40,6 +40,7 @@ class SpeechRecognition {
           setTimeout(appearancePlayer, 500)
           $sounds[1].play()
           $sounds[0].pause()
+          $sounds[2].pause()
           $pausedButton.classList.remove("hide")
           $playButton.style.display = "none"
           currentSound = $sounds[1]
