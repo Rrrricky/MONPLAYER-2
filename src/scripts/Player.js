@@ -260,7 +260,7 @@ class Player {
       $seekBar.addEventListener(
         "touchstart",
         (event) => {
-          event.preventDefault()
+          event.touches[0].preventDefault()
           const ratio = (event.touches[0].clientX - $seekBar.offsetLeft + ($seekBar.offsetWidth / 2)) / $seekBar.offsetWidth
           /*clientX gives a value relative to where you click. But this valeur is offset compared to original margin. OffsetLeft allows to get the value of the offset relative to the page*/
           for (let i = 0; i < $sounds.length; i++) {
